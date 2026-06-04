@@ -1,0 +1,164 @@
+/* ============================================================
+   DURAXIA INDUSTRIES — Shared design system (Direction C: Flow)
+   ============================================================ */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#0c1116;--ink-2:#141b22;--char:#1c2630;
+  --teal:#22a3bf;--teal-deep:#0f7c96;
+  --orange:#FF6A3D;--orange-d:#ed5326;
+  --cream:#F6F3EC;--paper:#fbfaf7;--line:#e7e3d9;--muted:#6b7178;
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.dh{font-family:'Bricolage Grotesque',sans-serif;line-height:.98;letter-spacing:-.02em}
+.wrap{max-width:1280px;margin:0 auto;padding:0 44px}
+a{text-decoration:none;color:inherit}
+img{display:block}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--teal-deep);display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';width:30px;height:1px;background:currentColor}
+.eyebrow.center{justify-content:center}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:15px;padding:14px 28px;border-radius:100px;transition:all .3s var(--ease);cursor:pointer;border:none;font-family:inherit;white-space:nowrap}
+.btn .arr{transition:transform .3s var(--ease)}
+.btn:hover .arr{transform:translateX(4px)}
+.btn-pri{background:var(--orange);color:#fff}
+.btn-pri:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(255,106,61,.4);background:var(--orange-d)}
+.btn-cream{background:var(--cream);color:var(--ink)}
+.btn-cream:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.14)}
+.btn-out{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+.btn-out:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(12,17,22,.3)}
+.btn-line-ink{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-line-ink:hover{border-color:var(--teal-deep);color:var(--teal-deep)}
+
+/* ===== NAV ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease);border-bottom:1px solid transparent}
+header.scrolled{background:rgba(12,17,22,.86);backdrop-filter:blur(14px);border-bottom-color:rgba(255,255,255,.08)}
+nav{display:flex;align-items:center;justify-content:space-between;height:88px;transition:height .35s var(--ease)}
+header.scrolled nav{height:74px}
+.brand{display:flex;align-items:center;gap:13px}
+.brand .mk{height:46px;width:46px;background:#fff;border-radius:11px;padding:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:height .3s,width .3s}
+header.scrolled .brand .mk{height:42px;width:42px}
+.brand .mk img{width:100%;height:100%;object-fit:contain}
+.brand .bx{display:flex;flex-direction:column;line-height:1}
+.brand .bx b{font-family:'Bricolage Grotesque';font-size:23px;font-weight:700;color:#fff;letter-spacing:-.01em}
+.brand .bx s{font-family:'Inter';font-size:10px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--teal);text-decoration:none;margin-top:3px}
+.nav-links{display:flex;gap:32px;align-items:center}
+.nav-links a{font-size:15px;font-weight:500;color:rgba(255,255,255,.82);transition:color .2s;position:relative}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--teal);transition:width .3s var(--ease)}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-tel{font-size:14px;font-weight:500;color:rgba(255,255,255,.7);transition:color .2s}
+.nav-tel:hover{color:#fff}
+.hamb{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.hamb span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+.mnav{display:none}
+
+/* ===== TICKER ===== */
+.ticker{background:var(--ink-2);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07);overflow:hidden;padding:18px 0}
+.ticker .row{display:flex;gap:54px;align-items:center;white-space:nowrap;animation:scroll 30s linear infinite;width:max-content}
+.ticker span{font-family:'Bricolage Grotesque';font-size:17px;font-weight:600;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:54px}
+.ticker span::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ===== INTERIOR PAGE HERO ===== */
+.phero{background:var(--ink);position:relative;overflow:hidden;padding:188px 0 96px}
+.phero::before{content:'';position:absolute;inset:0;background:url('../img/about-facility.jpg') center/cover;opacity:.14}
+.phero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 75% 20%,rgba(34,163,191,.18),transparent 55%)}
+.phero .wrap{position:relative;z-index:2}
+.phero .eyebrow{color:var(--teal);margin-bottom:24px}
+.phero h1{font-size:72px;font-weight:700;color:#fff;max-width:880px;margin-bottom:24px}
+.phero h1 em{font-style:normal;color:var(--teal)}
+.phero p{font-size:20px;color:rgba(255,255,255,.74);max-width:600px;line-height:1.6}
+
+/* ===== SECTION SHELL ===== */
+.sec{padding:120px 0}
+.sec.tight{padding:90px 0}
+.shead{max-width:680px;margin-bottom:60px}
+.shead.center{margin-left:auto;margin-right:auto;text-align:center}
+.shead .eyebrow{margin-bottom:20px}
+.shead h2{font-size:50px;font-weight:700;margin-bottom:20px;color:var(--ink)}
+.shead.center .eyebrow{justify-content:center}
+.shead p{font-size:18px;color:var(--muted);line-height:1.6}
+
+/* ===== BIG NUMBERS BAND ===== */
+.bignum{background:var(--cream);padding:104px 0}
+.bignum .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.bn b{font-family:'Bricolage Grotesque';font-size:70px;font-weight:700;line-height:.85;color:var(--ink);display:block}
+.bn b u{text-decoration:none;color:var(--orange)}
+.bn span{font-size:15px;color:var(--muted);margin-top:16px;display:block;border-top:1px solid var(--line);padding-top:16px}
+
+/* ===== CTA ===== */
+.cta{background:var(--ink);position:relative;overflow:hidden}
+.cta .cta-bg{position:absolute;inset:0;background:url('../img/about-facility.jpg') center/cover;opacity:.16}
+.cta .wrap{position:relative;z-index:2;padding:128px 44px;text-align:center}
+.cta .eyebrow{color:var(--teal);justify-content:center;margin-bottom:26px}
+.cta h2{font-size:62px;font-weight:700;color:#fff;margin-bottom:22px;max-width:760px;margin-left:auto;margin-right:auto}
+.cta p{font-size:19px;color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 38px}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink-2);color:rgba(255,255,255,.6);padding:80px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px}
+.foot-brand .l{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.foot-brand .mk{height:46px;width:46px;background:#fff;border-radius:11px;padding:6px;display:flex;align-items:center;justify-content:center}
+.foot-brand .mk img{width:100%;height:100%;object-fit:contain}
+.foot-brand .l b{font-family:'Bricolage Grotesque';font-size:21px;color:#fff}
+.foot-brand p{font-size:15px;line-height:1.7;max-width:300px}
+.foot-col h4{color:#fff;font-size:14px;font-weight:600;margin-bottom:20px;font-family:'Bricolage Grotesque'}
+.foot-col a{display:block;font-size:15px;padding:7px 0;transition:color .2s}
+.foot-col a:hover{color:var(--teal)}
+.foot-bot{border-top:1px solid rgba(255,255,255,.1);padding-top:28px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13.5px;color:rgba(255,255,255,.4)}
+
+/* ===== WHATSAPP FLOAT ===== */
+.wa{position:fixed;right:26px;bottom:26px;z-index:300;display:flex;align-items:center;gap:12px;text-decoration:none}
+.wa .tip{background:#fff;color:var(--ink);font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:100px;box-shadow:0 8px 24px rgba(0,0,0,.16);opacity:0;transform:translateX(8px);transition:all .3s var(--ease);pointer-events:none;white-space:nowrap}
+.wa:hover .tip{opacity:1;transform:translateX(0)}
+.wa .bub{width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(37,211,102,.42);transition:transform .3s var(--ease)}
+.wa:hover .bub{transform:scale(1.08)}
+.wa .bub svg{width:30px;height:30px;fill:#fff}
+
+/* ===== REVEAL ===== */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:translateY(0)}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}
+
+/* ===== RESPONSIVE ===== */
+/* hide phone number first to give the nav links room */
+@media(max-width:1140px){ .nav-tel{display:none} }
+
+/* layout adjustments (nav still full) */
+@media(max-width:980px){
+  .wrap{padding:0 30px}
+  .phero{padding:148px 0 72px}
+  .phero h1{font-size:46px}
+  .shead h2{font-size:36px}
+  .bignum .grid{grid-template-columns:1fr 1fr;gap:34px 24px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .cta h2{font-size:40px}
+  .cta .wrap{padding:90px 24px}
+}
+
+/* collapse nav to hamburger menu */
+@media(max-width:860px){
+  .wrap{padding:0 22px}
+  .nav-links{display:none}
+  .hamb{display:flex}
+  .mnav{display:block;position:fixed;inset:0;z-index:199;background:var(--ink);padding:110px 30px 40px;transform:translateX(100%);transition:transform .4s var(--ease)}
+  .mnav.open{transform:translateX(0)}
+  .mnav a{display:block;font-family:'Bricolage Grotesque';font-size:30px;font-weight:600;color:#fff;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .mnav .btn{margin-top:26px;width:100%;justify-content:center}
+  body.menu-open{overflow:hidden}
+  body.menu-open .hamb span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  body.menu-open .hamb span:nth-child(2){opacity:0}
+  body.menu-open .hamb span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(max-width:560px){
+  .phero h1{font-size:36px}
+  .bignum .grid{grid-template-columns:1fr 1fr;gap:30px 20px}
+  .foot-grid{grid-template-columns:1fr}
+  .bn b{font-size:54px}
+}
