@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Technical — Specifications, Testing &amp; Certifications | Duraxia Industries</title>
+<meta name="description" content="Every Duraxia product passes rigorous in-house testing and meets national and international standards — TAC, BSNL-TSEC, IS:4984:2016.">
+<link rel="canonical" href="https://www.duraxia.co.in/technical.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0c1116">
+<meta name="author" content="Duraxia Industries">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Duraxia Industries">
+<meta property="og:locale" content="en_IN">
+<meta property="og:title" content="Technical — Specifications, Testing & Certifications | Duraxia Industries">
+<meta property="og:description" content="Every Duraxia product passes rigorous in-house testing and meets national and international standards — TAC, BSNL-TSEC, IS:4984:2016.">
+<meta property="og:url" content="https://www.duraxia.co.in/technical.html">
+<meta property="og:image" content="https://www.duraxia.co.in/img/technical-lab.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Technical — Specifications, Testing & Certifications | Duraxia Industries">
+<meta name="twitter:description" content="Every Duraxia product passes rigorous in-house testing and meets national and international standards — TAC, BSNL-TSEC, IS:4984:2016.">
+<meta name="twitter:image" content="https://www.duraxia.co.in/img/technical-lab.jpg">
+<link rel="icon" type="image/png" href="img/logo-tight.png">
+<link rel="apple-touch-icon" href="img/logo-tight.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+/* lab */
+.lab .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.lab .pic{border-radius:22px;overflow:hidden;box-shadow:0 30px 70px rgba(12,17,22,.2);aspect-ratio:3/3.6}
+.lab .pic img{width:100%;height:100%;object-fit:cover}
+.lab .eyebrow{margin-bottom:20px}
+.lab h2{font-size:46px;font-weight:700;margin-bottom:22px;color:var(--ink)}
+.lab h2 em{font-style:normal;color:var(--teal-deep)}
+.lab p{font-size:17px;color:var(--muted);margin-bottom:16px;line-height:1.7}
+
+/* certifications */
+.certs{background:var(--ink);color:#fff}
+.certs .shead h2{color:#fff}.certs .shead p{color:rgba(255,255,255,.7)}.certs .eyebrow{color:var(--teal)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.ccard{background:var(--ink-2);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:40px;transition:all .35s var(--ease)}
+.ccard:hover{transform:translateY(-6px);border-color:rgba(34,163,191,.5)}
+.cbadge{display:inline-flex;align-items:center;justify-content:center;height:54px;padding:0 18px;border-radius:12px;background:linear-gradient(135deg,var(--teal-deep),var(--teal));font-family:'Bricolage Grotesque';font-size:17px;font-weight:700;color:#fff;margin-bottom:26px;letter-spacing:.02em}
+.ccard h3{font-size:23px;font-weight:700;color:#fff;margin-bottom:14px}
+.ccard p{font-size:14.5px;color:rgba(255,255,255,.66);line-height:1.65}
+
+/* testing protocols */
+.tcol{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.tprod{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
+.tprod .th{padding:26px 30px;background:var(--cream);display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.tprod .th h3{font-size:22px;font-weight:700;color:var(--ink)}
+.tprod .th .badge{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--teal-deep);background:rgba(34,163,191,.12);padding:6px 13px;border-radius:100px}
+.tlist{padding:14px 30px 26px}
+.titem{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid var(--line)}
+.titem:last-child{border-bottom:none}
+.tnum{font-family:'Bricolage Grotesque';font-size:14px;font-weight:700;color:var(--teal-deep);flex-shrink:0;width:26px;padding-top:2px}
+.tname{font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.tdesc{font-size:13.5px;color:var(--muted);line-height:1.5}
+
+/* standards */
+.standards{background:var(--cream)}
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.stdcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:32px 36px;display:flex;justify-content:space-between;align-items:center;gap:20px;transition:all .3s var(--ease)}
+.stdcard:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(12,17,22,.08)}
+.stdcard h3{font-size:25px;font-weight:700;color:var(--ink);font-family:'Bricolage Grotesque'}
+.stdcard .tag{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--ink);padding:8px 16px;border-radius:100px;white-space:nowrap}
+
+@media(max-width:980px){
+  .lab .grid{grid-template-columns:1fr;gap:40px}
+  .lab .pic{order:-1;aspect-ratio:4/3}
+  .lab h2{font-size:34px}
+  .cgrid,.tcol,.sgrid{grid-template-columns:1fr}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.duraxia.co.in/#organization","name":"Duraxia Industries","url":"https://www.duraxia.co.in/","logo":"https://www.duraxia.co.in/img/logo-tight.png","image":"https://www.duraxia.co.in/img/about-facility.jpg","description":"Bangalore-based manufacturer of PLB HDPE ducts and HDPE pipes for India's telecom and infrastructure sector.","telephone":"+91-99009-98904","email":"sales@duraxia.co.in","address":{"@type":"PostalAddress","streetAddress":"Dabaspet Industrial Village","addressLocality":"Bengaluru","addressRegion":"Karnataka","postalCode":"562111","addressCountry":"IN"},"areaServed":{"@type":"Country","name":"India"},"knowsAbout":["PLB HDPE Ducts","HDPE Pipes","Fiber optic duct","Telecom infrastructure","Water supply pipes"],"founder":[{"@type":"Person","name":"Ashish Sharma","jobTitle":"Co-Founder"},{"@type":"Person","name":"Dinaker Reddy","jobTitle":"Co-Founder"},{"@type":"Person","name":"Ankit Sharma","jobTitle":"Co-Founder"}],"contactPoint":{"@type":"ContactPoint","telephone":"+91-99009-98904","email":"sales@duraxia.co.in","contactType":"sales","areaServed":"IN","availableLanguage":["en","hi"]}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.duraxia.co.in/"},{"@type":"ListItem","position":2,"name":"Technical","item":"https://www.duraxia.co.in/technical.html"}]}]}
+</script>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mk"><img src="img/logo-tight.png" alt="Duraxia Industries" width="256" height="254" loading="eager" decoding="async" fetchpriority="high"></span>
+      <span class="bx"><b>Duraxia</b><s>Industries</s></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="technical.html" class="active" aria-current="page">Technical</a><a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="tel:+919900998904" class="nav-tel">+91 99009 98904</a>
+      <a href="contact.html" class="btn btn-pri">Request Quote <span class="arr">→</span></a>
+      <button class="hamb" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+<div class="mnav">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="products.html">Products</a><a href="technical.html">Technical</a><a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-pri">Request Quote →</a>
+</div>
+
+<main>
+<section class="phero">
+  <div class="wrap">
+    <div class="eyebrow">Technical specifications</div>
+    <h1>Quality you can <em>verify.</em></h1>
+    <p>Every Duraxia product passes rigorous in-house testing and meets stringent national and international standards before it reaches your project site.</p>
+  </div>
+</section>
+
+<section class="sec lab">
+  <div class="wrap grid">
+    <div class="pic reveal"><img src="img/technical-lab.jpg" alt="Duraxia in-house testing laboratory" width="932" height="1400" loading="lazy" decoding="async"></div>
+    <div class="copy reveal d1">
+      <div class="eyebrow">In-house testing laboratory</div>
+      <h2>Where <em>every meter</em> earns its quality.</h2>
+      <p>Our testing laboratory at the Dabaspet plant houses precision instruments including a Universal Tensile Tester, Differential Scanning Calorimetry equipment, and specialised gauges for dimensional verification.</p>
+      <p>Every batch undergoes systematic testing protocols before shipment — ensuring the products you receive meet exact specifications and exceed industry standards.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec certs">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">Our certifications</div>
+      <h2>Credentials that validate our work.</h2>
+      <p>Industry-recognised certifications that confirm our manufacturing excellence.</p>
+    </div>
+    <div class="cgrid">
+      <div class="ccard reveal"><div class="cbadge">TAC</div><h3>TAC Certified</h3><p>Telecommunication Approval Certificate ensuring compliance with India's telecom infrastructure requirements for fiber-optic duct systems.</p></div>
+      <div class="ccard reveal d1"><div class="cbadge">BSNL-TSEC</div><h3>BSNL-TSEC Approved</h3><p>Bharat Sanchar Nigam Limited — Telecom Standards Engineering Centre approval for premium PLB HDPE ducts in government telecom projects.</p></div>
+      <div class="ccard reveal d2"><div class="cbadge">IS:4984</div><h3>IS:4984:2016 Compliant</h3><p>Indian Standard certification for HDPE pipes used in water supply — ensuring long service life and consistent performance under pressure.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec standards" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">In-house testing protocols</div>
+      <h2>Every batch, systematically verified.</h2>
+      <p>Comprehensive quality control through systematic testing of every production batch.</p>
+    </div>
+    <div class="tcol">
+      <div class="tprod reveal">
+        <div class="th"><h3>PLB HDPE Ducts</h3><span class="badge">Telecom Grade</span></div>
+        <div class="tlist">
+          <div class="titem"><div class="tnum">01</div><div><div class="tname">Density Test</div><div class="tdesc">Verifies material density per industry standards</div></div></div>
+          <div class="titem"><div class="tnum">02</div><div><div class="tname">Tensile Strength Test</div><div class="tdesc">Measures resistance to breaking under tension</div></div></div>
+          <div class="titem"><div class="tnum">03</div><div><div class="tname">Elongation at Break</div><div class="tdesc">Tests material flexibility and ductility</div></div></div>
+          <div class="titem"><div class="tnum">04</div><div><div class="tname">Coefficient of Friction</div><div class="tdesc">Validates silicon-lining performance for cable pulling</div></div></div>
+          <div class="titem"><div class="tnum">05</div><div><div class="tname">Crush Resistance</div><div class="tdesc">Tests ability to withstand external pressure</div></div></div>
+          <div class="titem"><div class="tnum">06</div><div><div class="tname">Impact Strength Test</div><div class="tdesc">Measures resistance to sudden physical impact</div></div></div>
+          <div class="titem"><div class="tnum">07</div><div><div class="tname">Dimensional Inspection</div><div class="tdesc">Verifies OD, ID, and wall-thickness accuracy</div></div></div>
+          <div class="titem"><div class="tnum">08</div><div><div class="tname">Visual Inspection</div><div class="tdesc">Surface finish and colour-consistency check</div></div></div>
+        </div>
+      </div>
+      <div class="tprod reveal d1">
+        <div class="th"><h3>HDPE Pipes</h3><span class="badge">Water &amp; Electrical</span></div>
+        <div class="tlist">
+          <div class="titem"><div class="tnum">01</div><div><div class="tname">Hydrostatic Pressure Test</div><div class="tdesc">Validates pressure rating up to PN 10</div></div></div>
+          <div class="titem"><div class="tnum">02</div><div><div class="tname">Density Test</div><div class="tdesc">Confirms material composition and quality</div></div></div>
+          <div class="titem"><div class="tnum">03</div><div><div class="tname">Carbon Black Content</div><div class="tdesc">Tests UV resistance for outdoor applications</div></div></div>
+          <div class="titem"><div class="tnum">04</div><div><div class="tname">Carbon Black Dispersion</div><div class="tdesc">Verifies even distribution for consistent quality</div></div></div>
+          <div class="titem"><div class="tnum">05</div><div><div class="tname">Melt Flow Index</div><div class="tdesc">Measures polymer flow properties</div></div></div>
+          <div class="titem"><div class="tnum">06</div><div><div class="tname">Reversion Test</div><div class="tdesc">Tests material stability under heat</div></div></div>
+          <div class="titem"><div class="tnum">07</div><div><div class="tname">Wall Thickness Check</div><div class="tdesc">Ensures uniform wall thickness across length</div></div></div>
+          <div class="titem"><div class="tnum">08</div><div><div class="tname">Outer Diameter Verification</div><div class="tdesc">Dimensional accuracy per IS:4984:2016</div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec standards">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div class="eyebrow">Standards &amp; compliance</div>
+      <h2>Aligned to national benchmarks.</h2>
+      <p>Manufacturing aligned with national and international quality benchmarks.</p>
+    </div>
+    <div class="sgrid">
+      <div class="stdcard reveal"><h3>IS:4984:2016</h3><span class="tag">HDPE Pipes</span></div>
+      <div class="stdcard reveal d1"><h3>TEC GR/CDS-08/02</h3><span class="tag">PLB Ducts</span></div>
+      <div class="stdcard reveal"><h3>TAC Certification</h3><span class="tag">Telecom</span></div>
+      <div class="stdcard reveal d1"><h3>BSNL-TSEC</h3><span class="tag">Government</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-bg"></div>
+  <div class="wrap">
+    <div class="eyebrow">Documentation</div>
+    <h2>Need detailed test reports?</h2>
+    <p>Request comprehensive technical datasheets, test certificates, and compliance documentation for your procurement and engineering teams.</p>
+    <a href="contact.html" class="btn btn-pri">Request Documentation <span class="arr">→</span></a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="l"><span class="mk"><img src="img/logo-tight.png" alt="Duraxia Industries" width="256" height="254" loading="eager" decoding="async" fetchpriority="high"></span><b>Duraxia</b></div>
+        <p>Bangalore-based manufacturer of PLB HDPE ducts and HDPE pipes for India's telecom and infrastructure sector.</p>
+      </div>
+      <div class="foot-col"><h4>Products</h4><a href="products.html">PLB HDPE Ducts</a><a href="products.html">HDPE Pipes</a><a href="technical.html">Technical Specs</a><a href="technical.html">Certifications</a></div>
+      <div class="foot-col"><h4>Company</h4><a href="about.html">About Duraxia</a><a href="about.html">Leadership</a><a href="about.html">Heritage</a><a href="contact.html">Contact</a></div>
+      <div class="foot-col"><h4>Get in touch</h4><a href="tel:+919900998904">+91 99009 98904</a><a href="mailto:sales@duraxia.co.in">sales@duraxia.co.in</a><a href="contact.html">Request Quote</a></div>
+    </div>
+    <div class="foot-bot"><span>© 2026 Duraxia Industries. All rights reserved.</span><span>Dabaspet Industrial Village, Bangalore</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/919900998904?text=Hi%20Duraxia,%20I'm%20interested%20in%20your%20HDPE%20products" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="tip">Chat with us</span>
+  <span class="bub"><svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.157 5.335 5.494 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.738-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg></span>
+</a>
+
+<script src="js/site.js"></script>
+</body>
+</html>
